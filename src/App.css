@@ -1,38 +1,151 @@
-.App {
-  text-align: center;
-}
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+* {
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+    font-family: "Nunito Sans", sans-serif;
   }
-}
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+  body{
+    background-color:hsl(207, 26%, 17%) ;
+    font-family: "Nunito Sans", sans-serif;
+    color: white;
+    cursor: pointer;
   }
-  to {
-    transform: rotate(360deg);
+  body.light-theme{
+    background-color: hsl(0, 0%, 98%);
+    color:  hsl(200, 15%, 8%);
   }
-}
+  .header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color:  hsl(209, 23%, 22%);
+    padding:10px 20px;
+  }
+  body.light-theme .header {
+    background-color: hsl(0, 0%, 98%);
+    color: hsl(200, 15%, 8%);
+  }
+  
+  body.light-theme .details {
+    background-color: hsl(0, 0%, 98%);
+    color: hsl(200, 15%, 8%);
+  }
+  body.light-theme .filter .form-control input {
+    background-color: hsl(0, 0%, 98%);
+    color: hsl(200, 15%, 8%);
+  }
+  body.light-theme .filter .form-control input::placeholder {
+    color: hsl(200, 15%, 8%);
+  }
+  body.light-theme .filter .region-filter .select {
+    background-color: hsl(0, 0%, 98%);
+    color: hsl(200, 15%, 8%);
+  }
+  .filter{
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+  }
+  .filter .form-control{
+    width: 100%;
+  }
+  .filter .form-control input{
+    background-color:  hsl(209, 23%, 22%);
+    border: none;
+    outline: none;
+    padding: 12px;
+    border-radius: 5px;
+    color: white;
+    font-family: inherit;
+    letter-spacing: 0.5px;
+    width: 100%;
+    margin: 0 0 30px;
+  }
+  .filter .form-control input::placeholder{
+    color: white;
+  }
+ 
+  .filter .region-filter .select{
+    background-color:  hsl(209, 23%, 22%);
+    color: white;
+    font-family: inherit;
+    padding: 12px;
+    width: 200px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+  }
+  .buttons{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .country-flag {
+    width: 100%; 
+    height: 150px; 
+    object-fit: cover; 
+  }
+  .grid{
+    display: grid;
+    grid-template-columns:  1fr;
+    gap: 40px;
+    padding: 20px;
+  }
+  .grid article img{
+    border-radius: 5px 5px 0 0;
+  }
+  .grid .details{
+    background-color:   hsl(209, 23%, 22%);
+    padding: 20px;
+    margin-top: -10px;
+    border-radius: 0 0 5px 5px;
+  }
+  .grid .details h3{
+    padding-bottom: 10px;
+  }
+  .grid .details h4{
+    padding-bottom: 5px;
+  }
+  .search{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  @media (min-width:640px) {
+    .filter{
+        flex-direction: row;
+       
+    }
+    .filter .form-control{
+        width: auto;
+    }
+    .filter .form-control input{
+        width: auto;
+        margin: 0;
+    }
+    .filter .region-filter{
+        width: auto;
+      }
+    .grid{
+        grid-template-columns: repeat(2,1fr);
+    }
+  }
+  @media (min-width:768px) {
+    .grid{
+        grid-template-columns: repeat(3,1fr);
+    }
+  }
+  @media (min-width:992px) {
+    .header, .filter, .grid{
+        padding: 20px 100px;
+    }
+    .grid{
+        grid-template-columns: repeat(4,1fr);
+        gap: 60px;
+    }
+  }
