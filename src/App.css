@@ -134,6 +134,11 @@
     .grid{
         grid-template-columns: repeat(2,1fr);
     }
+    .search{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
   }
   @media (min-width:768px) {
     .grid{
@@ -147,5 +152,10 @@
     .grid{
         grid-template-columns: repeat(4,1fr);
         gap: 60px;
+    }
+    .search{
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
   }
