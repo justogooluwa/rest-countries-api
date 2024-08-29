@@ -111,11 +111,18 @@
   .grid .details h4{
     padding-bottom: 5px;
   }
-  .search{
+  .search {
+    position: relative; 
     display: flex;
     align-items: center;
     justify-content: center;
-  }
+}
+.search i {
+  position: absolute; 
+  right: 10px; 
+  cursor: pointer; 
+  font-size: 1.2em; 
+}
   @media (min-width:640px) {
     .filter{
         flex-direction: row;
@@ -134,12 +141,16 @@
     .grid{
         grid-template-columns: repeat(2,1fr);
     }
-    .search{
+    .search {
+      position: relative; 
       display: flex;
       align-items: center;
       justify-content: center;
-    }
   }
+  .search i{
+    margin-top: 25px;
+  }
+}
   @media (min-width:768px) {
     .grid{
         grid-template-columns: repeat(3,1fr);
@@ -153,9 +164,17 @@
         grid-template-columns: repeat(4,1fr);
         gap: 60px;
     }
-    .search{
+    .search {
+      position: relative; 
       display: flex;
       align-items: center;
       justify-content: center;
+  }
+  }
+  @media (min-width:375px){
+    .search i{
+      text-align: center;
+      justify-content: center;
+      margin-bottom: 25px;
     }
   }
